@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>socket.io chat example</title>
+    <link rel="stylesheet" href="chat.css"/>
+</head>
+<body>
+    <!--聊天面板-->
+    <div class="page chat" style="display: none;">
+        <ul class="user-list" style="position: absolute;top: 0;left: 0;width:200px;bottom: 0;overflow-y:scroll;"></ul>
+        <div class="messages" style="position:absolute;left:210px;top: 0;right: 0;bottom: 0;overflow-y:scroll;">
+            <ul class="message-list-box"></ul>
+        </div>
+        <input type="text" class="messageInput" style="position: absolute;left: 210px;bottom: 100px;right: 0;width: 50%;height:30px;"/>
+    </div>
+
+    <!--登录面板-->
+    <div class="page login" >
+        <h3>what's your nick name?</h3>
+        <input type="text" class="usernameInput"/>
+    </div>
+
+    <div class="alertMsg" style="display: none;"></div>
+
+    <script src="./javascript/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./javascript/main.js"></script>
+</body>
+</html>
